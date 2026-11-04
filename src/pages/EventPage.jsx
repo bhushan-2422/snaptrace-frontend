@@ -43,7 +43,7 @@ export default function EventPage() {
 
   const [selfie, setSelfie] = useState(null)
   const [selfiePreview, setSelfiePreview] = useState('')
-  const [threshold, setThreshold] = useState(0.45)
+  const [threshold, setThreshold] = useState(0.52)
   const [searching, setSearching] = useState(false)
   const [results, setResults] = useState(null)
   const fileRef = useRef(null)
@@ -461,7 +461,7 @@ export default function EventPage() {
               Take a photo
             </button>
             {selfiePreview && <img className="thumb-preview" src={selfiePreview} alt="selfie preview" />}
-            <label style={{ fontSize: '.82rem', color: 'var(--ink-soft)' }}>
+            {/* <label style={{ fontSize: '.82rem', color: 'var(--ink-soft)' }}>
               threshold <b style={{ color: 'var(--accent)' }}>{threshold.toFixed(2)}</b>
               <input
                 type="range"
@@ -472,7 +472,7 @@ export default function EventPage() {
                 onChange={(e) => setThreshold(Number(e.target.value))}
                 style={{ display: 'block', width: 170 }}
               />
-            </label>
+            </label> */}
             <button className="btn accent" onClick={runSearch} disabled={searching || !selfie}>
               {searching ? <span className="spinner" /> : 'Search'}
             </button>
