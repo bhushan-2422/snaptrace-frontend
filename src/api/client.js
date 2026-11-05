@@ -1,4 +1,4 @@
-const BASE = '/api/v1'
+const BASE = 'http://13.235.81.23/api/v1'
 const ACCESS_KEY = 'snaptrace_access'
 const REFRESH_KEY = 'snaptrace_refresh'
 
